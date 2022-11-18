@@ -2,8 +2,8 @@
 # Smart Lender - Applicant Credibility Prediction for Loan Approval
 
 # TEAM LEADER - BIJAY KUMAR CHAUDHARY
-1 TEAM MEMBERS - Shivadash Agrahari Baniya
-2 TEAM MEMBERS - Mohanraj A
-3 TEAM MEMBERS - Mohanraj R
+1. TEAM MEMBERS - Shivadash Agrahari Baniya
+2. TEAM MEMBERS - Mohanraj A
+3. TEAM MEMBERS - Mohanraj R
 
 ## REFERENCE - IBM-Project-26307-1660024383
