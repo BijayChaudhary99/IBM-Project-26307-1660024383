@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Predictor - Home</title>
+    <link rel="icon" href="static/images/money.png" type="image/x-icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css">
+    <!-- <link rel="stylesheet" href="static/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="static/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="static/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="static/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="static/css/slicknav.min.css" type="text/css"> -->
+    <link rel="stylesheet" href="static/css/STYLES.css" type="text/css">
+
+</head>
+
+<body>  <!--background="../STATIC/IMAGES/Lending.jpg"-->
+    <nav>
+        <div class="teams">
+            <div class="logo">
+                <a href="#">LOAN PREDICTOR💰 </a>
+    
+            </div>
+            <ul>
+                <li><a href="#">INFO</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">DETAILS</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="img"></div>
+            <div class="center">
+                        <div class="title">WELCOME TO LOAN PREDICTION</div>
+                        <br>
+                        <div class="sub_title">Find your Loan Eligibility here</div>
+                        
+                        <div class="btns">
+                            <a href="{{ url_for('predict') }}" class="tm-nav-link primary-btn" data-hover="Loan Predictor">
+                                 <button> Click to Check</button>
+                            </a>
+                        </div>
+               
+        </div>
+        </div>
+
+
+    </main>
+</body>
+
+</html>
+<style>
+    nav {
+        background-position: fixed;
+        background-color: rgb(107, 144, 192);
+        width: 100%;
+        padding: 12px 0;
+
+    }
+
+    nav .teams {
+        max-width: 1250px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .teams .logo a {
+        text-decoration: none;
+        color: rgb(10, 5, 5);
+        font-size: 30px;
+        background: white;
+        padding: 6px 12px;
+        border-radius: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 530;
+    }
+
+    .teams ul {
+        display: inline-flex;
+    }
+
+    .teams ul li {
+        list-style: none;
+        margin-left: 8px;
+    }
+
+    .teams ul li a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: 15px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 500;
+        background: white;
+        padding: 8px 15px;
+        border-radius: 30px;
+        transition: all 0.3s ease;
+    }
+
+    .teams ul li a:hover {
+        background: rgb(0, 16, 49);
+        color: white;
+    }
+
+    .img {
+        background: url('https://static.vecteezy.com/system/resources/previews/005/085/280/original/a-new-startup-has-successfully-applied-for-a-loan-from-a-bank-entrepreneur-successful-business-negotiations-and-approved-loan-free-vector.jpg') no-repeat;
+        height: 95vh;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+
+    .img::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+
+    .center {
+        position: absolute;
+        top: 58%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .center .title {
+        color: rgb(0, 20, 31);
+        font-size: 55px;
+        font-weight: 900;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .center .sub_title {
+        color: rgb(5, 21, 65);
+        font-size: 18px;
+        font-weight: 900;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .center .btns {
+        margin-top: 20px;
+    }
+
+    .center .btns button {
+        height: 45px;
+        width: 150px;
+        border-radius: 25px;
+        border: none;
+        margin: 0 10px;
+        border: 1px solid white;
+        font-size: 22px;
+        font-weight: 500;
+        font-family: fantasy;
+        padding: 0 10px;
+        cursor: pointer;
+        outline: none;
+        transition: all 0.3s ease;
+    }
+
+    .center .btns button:first-child {
+        color: rgb(8, 8, 8);
+        background: rgb(249, 250, 249);
+    }
+
+    .center .btns button:first-child:hover {
+        background: rgb(37, 71, 221);
+        color: rgb(236, 247, 247);
+    }
+</style>
