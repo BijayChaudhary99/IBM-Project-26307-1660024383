@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Predictor - Predict</title>
+   <!--<link rel="icon" href="static/images/money.png" type="image/x-icon">-->
+
+     <!-- Google Font -->
+     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ 
+     <!-- Css Styles -->
+     <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="static/css/STYLES.css" type="text/css">
+
+</head>
+
+<body>
+        <div class="container">
+        <div class="row">
+        
+        <br><br><br>
+        <h1 id="title">Loan Eligibility checklist</h1>
+        
+        <legend><p>Please fill in your details here</p></legend>
+        <table>
+                <form action="/result" method="POST" enctype="'multipart/form-data">
+                <tr>
+                        <td><h4>Are You a Lender / Loan Applicant</h4></td>
+                        <td class="td1"><input id="lend" name="lend" type="radio" value=1 required>&nbsp;Lender&ensp;&ensp;<input id="lend" name="lend" type="radio" value=0>&nbsp;Loan Applicant</td>
+                </tr>
+                <tr>
+                        <td><h4>Name (in Caps)</h4></td>
+                        <td><input name='name' type="text" required=""></td>
+                </tr>
+                <tr>
+                        <td><h4>Gender (Male/Female)</h4></td>
+                        <td class="td1"><input id="gender" name="gender" type="radio" value=1 required>&nbsp;Male&ensp;&ensp;<input id="gender" name="gender" type="radio" value=0>&nbsp;Female</td>
+                </tr>
+                <tr>
+                        <td><h4>Married(Yes/No)</h4></td>
+                        <td class="td1"><input id="married" name="married" type="radio" value=1 required>&nbsp;Yes&ensp;&ensp;<input id="married" name="married" type="radio" value=0>&nbsp;No</td>
+                </tr>
+                <tr>
+                        <td><h4>Dependents (Enter a number)</h4></td>
+                        <td><input name='dep' type="number" min="0" step='1' placeholder="" required=""></td>
+                </tr>
+                <tr>
+                        <td><h4>Education</h4></td>
+                        <td class="td1"><input id='edu' name='edu' type="radio" value=1 required>&nbsp;Non-Graduate&ensp;&ensp;<input id="edu" name="edu" type="radio" value=0>&nbsp;Graduate</td>
+                </tr>
+                <tr>
+                        <td><h4>Self Employed (Yes/No)</h4></td>
+                        <td class="td1"><input id="se" name="se" type="radio" value=1 required>&nbsp;Yes&ensp;&ensp;<input id="se" name="se" type="radio" value=0>&nbsp;No</td>
+                </tr>
+                <tr>
+                        <td><h4>Applicant Income </h4></td>
+                        <td><input id='AI' name='ai' type="number" min='0' required=""></td>
+                </tr>
+                <tr>
+                        <td><h4>Co-Applicant Income </h4></td>
+                        <td><input id='CAI' name='cai' type="number" min='0' required=""></td>
+                </tr>
+                <tr>
+                        <td><h4>Loan Amount </h4></td>
+                        <td><input id='la' name='la' type="number" min='0' required=""></td>
+                </tr>
+                <tr>
+                        <td><h4>Loan Amount Term (In days)</h4></td>
+                        <td><input id='lat' name='lat' type="number" min='0' step="1" required=""></td>
+                </tr>
+                <tr>
+                        <td><h4>Credit History (Yes/No)</h4></td>
+                        <td class="td1"><input id="ch" name="ch" type="radio" value=1 required>&nbsp;Yes&ensp;&ensp;<input id="ch" name="ch" type="radio" value=0>&nbsp;No</td>
+                </tr>
+                <tr>
+                        <td><h4>Property Area</h4></td>
+                        <td class="td1"><input id="pa" name="pa" type="radio" value=2 required>&nbsp;Urban&ensp;&ensp;<input id="pa" name="pa" type="radio" value=0>&nbsp;Rural&ensp;&ensp;<input id="pa" name="pa" type="radio" value=1>&nbsp;Semi Urban&ensp;&ensp;<input id="pa" name="pa" type="radio" value=0>&nbsp;No Property</td>
+                </tr>
+                <tr>
+                        <td>
+                        <input class="primary-btn-1" id="submit" type="submit" value="Click to Check">&emsp;<input class="primary-btn-1" id="reset" type="reset" value="Clear">
+                        </td>
+                </tr>
+                </form>
+        </table>
+        </div>
+       
+        </div>
+        </div>
+</body>
+</html>
+
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@1,300&family=Rubik:wght@300&display=swap');
+
+        *,
+        *::before,
+        *::after {
+                font-family: 'Rubik', sans-serif;
+                color: white;
+                box-sizing: border-box;
+        }
+
+        body {
+                /*margin-top: 6vh;*/
+                background: url("https://img.freepik.com/free-vector/bank-credit-finance-management-loan-agreement-signing-mortgage-money-credit_335657-3136.jpg?w=1380&t=st=1668591228~exp=1668591828~hmac=c22cafbc069cb7d25be2c9be6636a081239e7a9ca2fb66e0e6b7cd1109882eca"),
+                        linear-gradient(60deg, #000000, #abd4eee7);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-blend-mode: overlay;
+                background-position: center;
+        }
+
+        h1 {
+                font-weight: 600;
+                line-height: 2.6;
+        }
+
+        p {
+                font-size: 1.65rem;
+        }
+
+        h1,
+        p {
+                text-align: center;
+                margin-top: 0;
+                margin-bottom: 0.5rem;
+        }
+
+        a {
+                text-decoration: none;
+        }
+
+        label {
+                line-height: 2.5rem;
+                font-size: 25px;
+        }
+
+        input {
+                color: black;
+                font-weight: 600;
+        }
+
+        input[type="checkbox"] {
+                min-height: 1.1rem;
+                min-width: 1.1rem;
+        }
+
+        input[type="radio"] {
+                min-height: 1.3rem;
+                min-width: 1.3rem;
+        }
+
+        select,
+        option {
+                color: black;
+                font-weight: 600;
+                text-align: start;
+                width: 100%;
+                height: 35px;
+                border-radius: 5px;
+        }
+
+        option {
+                font-size: 1.013rem;
+        }
+
+        textarea {
+                min-width: 100%;
+                min-height: 150px;
+                color: black;
+                font-weight: 600;
+                border-radius: 5px;
+        }
+
+        textarea::placeholder {
+                padding-left: 10px;
+                font-size: 1.031rem;
+        }
+
+        textarea:focus {
+                outline: 3px solid rgb(0, 15, 255, 0.6);
+        }
+
+        select:focus {
+                outline: 3px solid rgb(0, 15, 255, 0.6);
+        }
+
+        select {
+                font-size: 1.013rem;
+                color: grey;
+                padding-left: 13px;
+        }
+
+        #survey-form {
+                background: rgb(0, 0, 0, 0.7);
+                min-height: 180vh;
+                margin: 10vh auto;
+                max-width: 750px;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+        }
+
+        #content {
+                width: 90%;
+                min-height: 140vh;
+                margin: 1.13rem auto;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-gap: 1.5rem;
+                justify-items: center;
+                border-radius: 10px;
+        }
+
+        .form-element {
+                width: 90%;
+                display: block;
+        }
+
+        .form-con {
+                width: 100%;
+                height: 35px;
+                border: none;
+                border-radius: 5px;
+        }
+
+        .form-con::placeholder {
+                font-size: 1.013rem;
+                padding-left: 15px;
+                font-weight: 600;
+        }
+
+        .form-con:focus {
+                outline: 3px solid rgb(0, 15, 255, 0.6);
+        }
+
+        .long {
+                line-height: 1.6rem;
+        }
+
+        .check {
+                min-height: 1.013rem;
+                min-width: 1.013rem;
+        }
+
+        #submit {
+                background: linear-gradient(-60deg, #ff0000, #da2727ba, #2658ccba, #150a8ae7);
+                width: 90%;
+                border-radius: 5px;
+                min-height: 2.031rem;
+                border: none;
+                font-weight: 600;
+                letter-spacing: 0.1rem;
+                cursor: pointer;
+                margin-bottom: 6vh;
+                font-size: 1.031rem;
+                background-size: 250% 250%;
+                animation: hover-effect 5s ease infinite;
+        }
+
+        #submit:hover {
+                outline: 3px solid rgb(0, 15, 255, 0.6);
+        }
+
+        #submit:focus {
+                animation: hover-effect 5s ease infinite;
+                outline: 3px solid rgb(0, 15, 255, 0.6);
+        }
+
+        textarea,
+        select {
+                margin-top: 1vh;
+        }
+
+        @keyframes hover-effect {
+                0% {
+                        background-position: 0% 50%;
+                }
+
+                50% {
+                        background-position: 100% 50%;
+                }
+
+                100% {
+                        background-position: 0% 50%;
+                }
+        }
+
+        @media(max-width:900px) {
+
+                #content,
+                #survey-form {
+                        max-width: 650px;
+                }
+
+                #content {
+                        margin: auto;
+                        max-width: 500px;
+                }
+
+                #submit {
+                        max-width: 500px;
+                        margin: 7vh 0;
+                }
+        }
+
+        @media(max-width:500px) {
+                .long {
+                        line-height: 2.0rem;
+                }
+
+                h1 {
+                        font-size: 1.7rem;
+                }
+
+                p {
+                        font-size: 1.3rem;
+                }
+
+                textarea,
+                select {
+                        margin-top: 8px;
+                }
+
+                * {
+                        font-size: 1.031rem;
+                        margin: auto 0;
+                }
+        }
+</style>
